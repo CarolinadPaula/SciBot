@@ -19,7 +19,7 @@ class SensorLinha{
       
       inline bool pb() {return (valorSensorDir > DIVISOR_BRANCO_PRETO && valorSensorEsq < DIVISOR_BRANCO_PRETO);}
         
-      inline bool pp() {return (valorSensorDir > DIVISOR_BRANCO_PRETO && valorSensorEsq > DIVISOR_BRANCO_PRETO);}
+      inline bool pp() {return (valorSensorDir < DIVISOR_BRANCO_PRETO && valorSensorEsq < DIVISOR_BRANCO_PRETO);}
 
       void recolherValoresSensorLinha();
 };

@@ -1,6 +1,9 @@
 #include "EstrategiaSci.h"
 
 void Estrategia::seguirLinha(){
+
+  sensoresLinha.recolherValoresSensorLinha();
+
   if(sensoresLinha.bb()){
     motores.paraFrent();
   }
@@ -14,6 +17,9 @@ void Estrategia::seguirLinha(){
     motores.paraEsquerda();
     delay(100);
   } 
+  else if(sensoresLinha.pp()){
+    motores.parar();
+  }
 }
  
 void Estrategia::executar(){
