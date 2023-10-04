@@ -5,7 +5,7 @@ Estrategia estrategia;
 
 void setup() {
   robo.configurar(false);
-}
+  }
 
 void loop() {
   estrategia.executar();

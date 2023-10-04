@@ -4,21 +4,18 @@ void Estrategia::seguirLinha(){
 
   sensoresLinha.recolherValoresSensorLinha();
 
-  if(sensoresLinha.bb()){
+  if(sensoresLinha.frente()){
     motores.paraFrent();
   }
 
-  else if(sensoresLinha.bp()){
+  else if(sensoresLinha.direita()){
     motores.paraDireita();
     delay(100);
   }
 
-  else if(sensoresLinha.pb()){
+  else if(sensoresLinha.esquerda()){
     motores.paraEsquerda();
     delay(100);
-  } 
-  else if(sensoresLinha.pp()){
-    motores.parar();
   }
 }
  

@@ -2,7 +2,9 @@
 
 
 void SensorLinha::recolherValoresSensorLinha(){
-    valorSensorEsq = robo.lerSensorLinhaEsq();
-    valorSensorDir = robo.lerSensorLinhaDir();
+    valorSensorLinhaMaisEsq = robo.lerSensorLinhaMaisEsq();;
+    valorSensorLinhaEsq = robo.lerSensorLinhaEsq();
+    valorSensorLinhaDir = robo.lerSensorLinhaDir();
+    valorSensorLinhaMaisDir = robo.lerSensorLinhaMaisDir();
     
 }

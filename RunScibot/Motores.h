@@ -7,9 +7,9 @@
 class Motores {
        private:
   
-    #define VELO_FRENT 50
+    #define VELO_FRENT 80
     
-    #define VELO_TRAS -60
+    #define VELO_TRAS -90
   
   public:
   
