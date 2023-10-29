@@ -22,6 +22,10 @@ class Motores {
     inline void paraDireita(){robo.acionarMotores(VELO_FRENT, VELO_TRAS);}
     
     inline void parar(){robo.acionarMotores(0, 0);}
+
+    inline void paraDireita90(){robo.acionarMotores(80, -80); delay(2200);}
+
+    inline void paraEsquerda90(){robo.acionarMotores(-80, 80); delay(2200);}
 };
 
 #endif

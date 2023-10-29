@@ -4,6 +4,7 @@
 #include <robo_hardware2.h>
 #include "Motores.h"
 #include "SensorLinha.h"
+#include "Sonar.h"
 
 class Estrategia {
   public:
@@ -14,8 +15,11 @@ class Estrategia {
 
     void seguirLinha();
 
+    void desviarObstaculo();
+
     Motores motores;
     SensorLinha sensoresLinha;
+    Sonar sonar;
 };
 
 #endif
