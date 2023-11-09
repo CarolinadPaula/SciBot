@@ -15,61 +15,66 @@ void Estrategia::seguirLinha(){
     motores.paraEsquerda();
     delay(100);
   }
+  else if (sensoresLinha.pppp()){
+    motores.paraFrent();
+  }
 }
 
-void Estrategia::desviarObstaculo(){
-  motores.paraDireita90();
-  sensoresLinha.recolherValoresSensorLinha();
-
-  while(!sensoresLinha.pppp()){
-    sensoresLinha.recolherValoresSensorLinha();
-
-    if(sensoresLinha.desalinhou_direita()){
-      motores.paraDireita();
-    }
-    else if(sensoresLinha.desalinhou_esquerda()){
-      motores.paraEsquerda();
-    }
-    else{
-      motores.paraTras();
-    }
-}
-
-  motores.paraFrent();
-  delay(3000);
-  motores.paraEsquerda90();
-  motores.paraFrent();
-  delay(3000);
-  motores.paraEsquerda90();
-  motores.paraFrent();
-  delay(1250);
-
-  while(!sensoresLinha.pppp()){
-    sensoresLinha.recolherValoresSensorLinha();
-
-    if(sensoresLinha.desalinhou_direita()){
-      motores.paraDireita();
-    }
-    else if(sensoresLinha.desalinhou_esquerda()){
-      motores.paraEsquerda();
-    }
-    else{
-      motores.paraTras();
-    }
-}
-
-  motores.paraFrent();
-  delay(1000);
-  motores.paraDireita90();
-}
+  void Estrategia::desviarObstaculoEsq(){
  
-void Estrategia::executar(){
+   motores.paraEsquerda90();
+   sensoresLinha.recolherValoresSensorLinha();
   
+    while(!sensoresLinha.pppp()){
+      sensoresLinha.recolherValoresSensorLinha();
+      
+      if(sensoresLinha.desalinhou_direita()){
+         motores.paraDireita();
+      }
+      else if(sensoresLinha.desalinhou_esquerda()){
+         motores.paraEsquerda();
+      }
+      else{
+      motores.paraTras();
+      }
+  }
+
+    motores.paraFrent();
+    delay(6000);
+    motores.paraDireita90();
+    motores.paraFrent();
+    delay(8500);
+    motores.paraDireita90();
+    motores.paraFrent();
+    delay(7000);
+   
+
+     while(!sensoresLinha.pppp()){
+      sensoresLinha.recolherValoresSensorLinha();
+      
+      if(sensoresLinha.desalinhou_direita()){
+         motores.paraDireita();
+      }
+      else if(sensoresLinha.desalinhou_esquerda()){
+         motores.paraEsquerda();
+      }
+      else{
+      motores.paraTras();
+      }
+  }
+  
+  motores.parar();
+  delay(5000);
+   
+  }
+
+void Estrategia::executar(){
+
   sonar.atualizarSensorSonar();
 
-  if(sonar.getSensorSonar() <= 7){
-  desviarObstaculo();
-  }
+  if(sonar.getSensorSonar() <= 7)
+  desviarObstaculoEsq();
+
   else{
   seguirLinha();
   }

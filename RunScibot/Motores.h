@@ -7,9 +7,9 @@
 class Motores {
        private:
   
-    #define VELO_FRENT 80
+    #define VELO_FRENT 90
     
-    #define VELO_TRAS -90
+    #define VELO_TRAS -70
   
   public:
   
@@ -23,9 +23,9 @@ class Motores {
     
     inline void parar(){robo.acionarMotores(0, 0);}
 
-    inline void paraDireita90(){robo.acionarMotores(80, -80); delay(2200);}
+    inline void paraDireita90(){robo.acionarMotores(VELO_TRAS, VELO_FRENT); delay(5800);}
 
-    inline void paraEsquerda90(){robo.acionarMotores(-80, 80); delay(2200);}
+    inline void paraEsquerda90(){robo.acionarMotores(VELO_FRENT, VELO_TRAS); delay(5800);}
 };
 
 #endif

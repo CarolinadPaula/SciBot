@@ -15,7 +15,9 @@ class Estrategia {
 
     void seguirLinha();
 
-    void desviarObstaculo();
+    void desviarObstaculoEsq();
+
+    void desviarObstaculoDir();
 
     Motores motores;
     SensorLinha sensoresLinha;
