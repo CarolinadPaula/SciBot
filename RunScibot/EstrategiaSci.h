@@ -15,6 +15,8 @@ class Estrategia {
 
     void seguirLinha();
 
+    void alinharRobo();
+
     void desviarObstaculoEsq();
 
     void desviarObstaculoDir();
