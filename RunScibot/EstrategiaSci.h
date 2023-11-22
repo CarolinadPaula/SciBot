@@ -5,6 +5,7 @@
 #include "Motores.h"
 #include "SensorLinha.h"
 #include "Sonar.h"
+#include "SensorCor.h"
 
 class Estrategia {
   public:
@@ -14,16 +15,15 @@ class Estrategia {
   private:
 
     void seguirLinha();
-
     void alinharRobo();
-
     void desviarObstaculoEsq();
-
     void desviarObstaculoDir();
+    void virarCorVerde();
 
     Motores motores;
-    SensorLinha sensoresLinha;
+    SensoresLinha sensoresLinha;
     Sonar sonar;
+    SensoresCor sensoresCor;
 };
 
 #endif
