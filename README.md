@@ -1,2 +1,2 @@
 # SciBot
-Repositorio do projeto de robotica da equipe SciBotics do IFRN-CM. A equipe é composta por Kaliane, Bruna, Carolina e Erik.
+Repositorio do projeto "SciBot" de robotica da equipe SciBotics do IFRN-CM.
